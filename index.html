@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamApp</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <h1 class="titulo">TeamApp</h1>
+            <p class="copy">Trabajamos por su empresa</p>
+        </div>
+
+    </header>
+    <main>
+        <section class="services contenedor" id="servicio">
+            <h2 class="subtitulo">A través de esta plataforma usted podrá:</h2>
+            <div class="contenedor-servicio">
+                <img src="img/checklist.jpg" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Administrar ventas</h3>
+                        <p> Ingresar o registrar los pedidos realizados por cada uno de los clientes.</p>
+
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Registrar el estado de la venta</h3>
+                        <p> Permite establecer los diferentes estados de la venta a lo largo del ciclo de vida de la línea de producción.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Gestionar los vendedores</h3>
+                        <p> Permite ingresar la información básica de los vendedores que participan en un negocio de ventas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="acceso">
+            <div class="contenedor-acceso">
+                <h2 class="subtitulo">Acceso</h2>
+                <p>Ingrese su usuario y contraseña para acceder al portal</p>
+                <br>
+                <script>
+                    function usrpas() {
+                        if (document.form1.txt.value == "admin1" && document.form1.num.value == "1234") {
+                            window.location = "home.htm";
+                            return
+                        }
+                        if (document.form1.txt.value == "admin2" && document.form1.num.value == "4321") {
+                            window.location = "prueba.htm";
+                            return
+                        }
+                        if (document.form1.txt.value == "admin3" && document.form1.num.value == "1324") {
+                            window.location = "pagina.htm";
+                            return
+                        } else {
+                            alert("Error en Usuario o Contraseña. Intenta de nuevo.")
+                        }
+                    }
+                    document.oncontextmenu = new Function("return false");
+                </script>
+                <form name="form1">
+                    Usuario: <input type="text" name="txt"><br> Contraseña: <input type="text" name="num"><br><br>
+                    <input type="button" value="Acceder" onclick="usrpas()">
+                </form>
+
+                <img src="img/google.jpg" alt="">
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">TeamApp</h2>
+                <p>Negocios íntegros y seguros</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
