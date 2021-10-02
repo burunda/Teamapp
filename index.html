@@ -28,13 +28,13 @@
                 <img src="img/checklist.jpg" alt="">
                 <div class="checklist-servicio">
                     <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Administrar ventas</h3>
-                        <p> Ingresar o registrar los pedidos realizados por cada uno de los clientes.</p>
+                        <h3 class="n-service"><span class="number">1</span>Gestionar ventas</h3>
+                        <p> Ingresar o registrar las ventas que se realizan.</p>
 
                     </div>
                     <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Registrar el estado de la venta</h3>
-                        <p> Permite establecer los diferentes estados de la venta a lo largo del ciclo de vida de la línea de producción.</p>
+                        <h3 class="n-service"><span class="number">2</span>Llevar un inventario</h3>
+                        <p> Permite establecer un inventario con todos los ingresos y las ventas.</p>
                     </div>
                     <div class="service">
                         <h3 class="n-service"><span class="number">3</span>Gestionar los vendedores</h3>
@@ -50,16 +50,8 @@
                 <br>
                 <script>
                     function usrpas() {
-                        if (document.form1.txt.value == "admin1" && document.form1.num.value == "1234") {
-                            window.location = "home.htm";
-                            return
-                        }
-                        if (document.form1.txt.value == "admin2" && document.form1.num.value == "4321") {
-                            window.location = "prueba.htm";
-                            return
-                        }
-                        if (document.form1.txt.value == "admin3" && document.form1.num.value == "1324") {
-                            window.location = "pagina.htm";
+                        if (document.form1.txt.value == "admin1" && document.form1.password.value == "1234") {
+                            window.location = "gestion.html";
                             return
                         } else {
                             alert("Error en Usuario o Contraseña. Intenta de nuevo.")
@@ -68,11 +60,14 @@
                     document.oncontextmenu = new Function("return false");
                 </script>
                 <form name="form1">
-                    Usuario: <input type="text" name="txt"><br> Contraseña: <input type="text" name="num"><br><br>
+                    Usuario: <input type="text" name="txt" placeholder="admin1"><br> Contraseña: <input type="password" name="password" placeholder="1234"><br><br>
                     <input type="button" value="Acceder" onclick="usrpas()">
                 </form>
 
-                <img src="img/google.jpg" alt="">
+                <figure>
+                    <img src="img/google.jpg">
+
+                </figure>
 
 
             </div>

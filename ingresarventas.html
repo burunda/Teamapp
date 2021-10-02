@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de ventas</title>
+    <link rel="stylesheet" href="estilos5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <h1 class="titulo">TeamApp</h1>
+            <p class="copy2">Trabajamos por su empresa</p>
+        </div>
+
+    </header>
+
+    <nav>
+        <br>
+        <a class="copy" href="perfil.html">Perfil</a>
+        <br>
+        <a class="copy" href="vehiculos.html">Vehículos</a>
+        <br>
+        <a class="copy" href="ventas.html">Ventas</a>
+        <br>
+        <a class="copy" href="usuarios.html">Usuarios</a>
+        <br>
+        <a class="copy" href="index.html">Cerrar sesión</a>
+    </nav>
+
+    <br/>
+
+    <a class="boton" href="ingresarventas.html">Ingresar venta</a>
+    <a class="boton" href="tablaventas.html">Tabla de ventas</a>
+
+    <br/>
+
+    <form class="form1" action="mi_servidor">
+        <fieldset>
+            <legend> Ingresar nueva venta </legend>
+
+            <label for="idconcesionario">Id del concesionario:</label><br/>
+            <input type="text" id="idconcesionario" name="idconcesionario" placeholder="Id del concesionario" required="true" /><br/>
+
+            <label for="idvehiculo">Id vehículo:</label><br/>
+            <input type="text" id="idvehiculo" name="idvehiculo" placeholder="Id del vehiculo" required="true" /><br/>
+
+            <label for="fechaVenta">Fecha de la venta:</label><br/>
+            <input type="date" id="fechaVenta" name="fechaVenta" placeholder="Fecha de la venta" required="true" /><br/>
+
+            <label for="nombreVehiculo">Nombre del vehículo:</label><br/>
+            <input type="text" id="nombreVehiculo" name="nombre" placeholder="Nombre del vehiculo" required="true" /><br/>
+
+            <label for="marca">Marca del vehículo:</label><br/>
+            <input type="text" id="marca" name="marca" placeholder="Marca del carro" required="true" /><br/>
+
+            <label for="modelo">Modelo del vehículo:</label><br/>
+            <input type="text" id="modelo" name="marca" placeholder="Modelo del carro" required="true" /><br/>
+
+            <label for="precio">Precio de la venta:</label><br/>
+            <input type="number" id="precio" name="precio" placeholder="Precio de la venta" required="true" /><br/>
+
+            <label for="ventas">Nombre del vendedor:</label><br/>
+            <select id="ventas" name="ventas">
+                <option value="andres">Andrés Osorio Reyes</option>
+                <option value="carlos">Carlos Cáceres Castro</option>
+                <option value="pedro">Pedro Morales Mora</option>
+                <option value="marlene">Marlene Rojas Rojas</option>
+                <option value="alejandro" selected="true">Alejandro González Mota</option>
+            </select><br/>
+
+            <br/>
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Restablecer" />
+
+        </fieldset>
+    </form>
+
+
+
+
+
+</body>
+
+</html>
