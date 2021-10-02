@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de ventas</title>
+    <link rel="stylesheet" href="estilos5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <h1 class="titulo">TeamApp</h1>
+            <p class="copy2">Trabajamos por su empresa</p>
+        </div>
+
+    </header>
+
+    <nav>
+        <br>
+        <a class="copy" href="perfil.html">Perfil</a>
+        <br>
+        <a class="copy" href="vehiculos.html">Vehículos</a>
+        <br>
+        <a class="copy" href="ventas.html">Ventas</a>
+        <br>
+        <a class="copy" href="usuarios.html">Usuarios</a>
+        <br>
+        <a class="copy" href="index.html">Cerrar sesión</a>
+    </nav>
+
+    <br/>
+
+    <a class="boton" href="ingresarvehiculo.html">Añadir al inventario</a>
+    <a class="boton" href="inventario.html">Inventario</a>
+
+    <br/>
+
+    <form class="form1" action="mi_servidor">
+        <fieldset>
+            <legend> Ingresar nuevo vehículo al inventario </legend>
+            <label for="idconcesionario">Id concesionario:</label><br/>
+            <input type="text" id="idconcesionario" name="idconcesionario" placeholder="Id del concesionario" required="true" /><br/>
+
+            <label for="idvehiculo">Id vehículo:</label><br/>
+            <input type="text" id="idvehiculo" name="idvehiculo" placeholder="Id del vehiculo" required="true" /><br/>
+
+            <label for="fechacompra">Fecha de la compra:</label><br/>
+            <input type="date" id="fechacompra" name="fechacompra" placeholder="Fecha de la compra" required="true" /><br/>
+
+            <label for="nombreVehiculo">Nombre del vehículo:</label><br/>
+            <input type="text" id="nombreVehiculo" name="nombre" placeholder="Nombre del vehiculo" required="true" /><br/>
+
+            <label for="marca">Marca del vehículo:</label><br/>
+            <input type="text" id="marca" name="marca" placeholder="Marca del carro" required="true" /><br/>
+
+            <label for="modelo">Modelo del vehículo:</label><br/>
+            <input type="text" id="modelo" name="marca" placeholder="Modelo del carro" required="true" /><br/>
+
+            <label for="costo">Costo de la compra:</label><br/>
+            <input type="number" id="costo" name="costo" placeholder="Costo de la compra" required="true" /><br/>
+
+            <label for="proveedor">Proveedor:</label><br/>
+            <select id="proveedor" name="proveedor">
+                <option value="toyota">Toyota</option>
+                <option value="kia">KIA</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="mazda" selected="true">Mazda</option>
+            </select><br/>
+
+            <br/>
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Restablecer" />
+
+        </fieldset>
+    </form>
+
+
+
+
+
+</body>
+
+</html>
