@@ -1,0 +1,540 @@
+HISTORIAS DE USUARIO
+
+HU_005_Login_Usuario
+HU_006_Registrar_Ventas
+HU_007_Verificar_correcto_almacenamiento_de_la_venta
+HU_008_Información_de_ventas_realizadas
+HU_009_Búsqueda_de_Venta
+HU_010_Actualización_de_Venta
+HU_011_Verificar_correcta_actualización_de_la_venta
+HU_012_Registrar_un_producto
+HU_013_Verificar_correcto_ingreso_del_producto
+HU_014_Ver_información_de_los_productos
+HU_015_Buscar_producto
+HU_016_Actualización_de_producto
+HU_017_Verificar_correcta_actualizacion_del_producto
+HU_018_Listar_información_de_vendedores
+HU_019_Actualizar_información_de_vendedores
+HU_020_Verificar_correcta_actualización_de_vendedores
+
+HU_005_Login_Usuario
+
+1.	Ingresar a la página web.
+2.	¿Está registrado?
+Si: 
+Ingresar usuario y contraseña.
+Seleccionar rol (Vendedor y/o Administrador).
+Nota: Conforme el usuario vaya ingresando la contraseña, cada letra debe ser reemplazada por un asterisco.
+¿El usuario se encuentra en la base de datos?
+Si:
+	Buscar y comparar la clave asignada para ese usuario.
+	¿Usuario y Clave Corresponden?
+		Si:
+		Ingresar a gestión de ventas.
+		No:
+		Imprimir “Usuario y/o clave no corresponden”.
+Una variable contadora “c” comienza en 1.
+		Poner en blanco los espacios para usuario y clave.
+		Solicitar los datos de nuevo.
+		¿Los datos coinciden?
+			Si:
+			Ingresar a gestión de ventas.
+		No:
+			Imprimir “Usuario y/o clave no corresponden”.
+			“c” aumenta en 1, “c”=2.
+			Poner en blanco los command box.
+		Solicitar datos nuevamente.
+			¿Los datos coinciden?
+				Si:
+			Ingresar a gestión de ventas.
+				No:
+				Imprimir “Usuario y/o clave no corresponden”.
+				“c” aumenta en 1, “c”=3.
+			Imprimir “¿Olvidó su contraseña?”
+				Dar opción de recuperar clave.
+				Habilitar un command box para escribir el correo electrónico registrado.
+Enviar un código aleatorio a correo o num celular.
+Habilitar un command box para ingresar el código enviado.
+				Comparar los códigos.
+				¿Códigos coinciden?
+					Si:
+					Permitir hacer cambio de contraseña
+				Habilitar dos command box
+					Para ingresar la nueva contraseña y luego confirmar la misma.
+					Actualizar la base de datos.
+					Ingresar a gestión de ventas.
+					No:
+					Habilitar la opción de crear una cuenta nueva.
+No:
+Abrir nueva página para creación de cuenta.
+Solicitar:
+Nombre completo.
+Número de Identificación.
+Número de celular.
+Solicitar número de cuenta bancaria.
+Solicitar Usuario.
+Solicitar clave de vendedor.
+Usuario se encuentra en base de datos?
+	Si:
+	Imprimir “El nombre de usuario ya ha sido asignado, por favor elija otro”
+	Dar la opción de iniciar sesión.
+	No:
+	Habilitar dos command box para la nueva contraseña y la verificación de la misma.
+	Nota: La contraseña debe ser de al menos 8 caracteres con una mayúscula y un número.
+	Conforme el usuario vaya ingresando la contraseña, cada letra debe ser reemplazada por asterisco.
+	-Verificar condiciones de contraseña
+	Evaluar que la longitud de la contraseña sea correcta
+	Recorrer toda la contraseña en búsqueda de la letra mayúscula y el número.
+	¿Se cumplen las condiciones de creación de la contraseña?
+		Si:
+		Habilitar botón para creación de cuenta 
+		Seleccionar rol y pasar a la página de gestión de ventas
+		No:
+		Sacar mensaje de error “Contraseña no válida” y resaltar el command box de la contraseña.
+	
+ 
+HU_006_Registrar_Ventas
+	
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Mostrará las ventas que han sido guardadas
+6.	Click en el botón “Agregar”
+7.	Habilitará una página que pedirá los siguientes datos
+Nombre del Vendedor
+	Producto
+	Cantidad
+	Precio por unidad
+	Costo total
+	Tipo de venta (Presencial o Virtual)
+	Presencial
+	Cliente
+	Nombre de la persona que recogerá el pedido
+	Virtual
+	Costo domicilio
+	Cliente que recibe
+	Dirección de residencia (Departamento, Ciudad, Dirección)
+8.	Click en el botón de “Registrar”
+9.	A dicha venta se le asignará un “consecutivo” que permitirá rastrear la información de la venta
+10.	Se hará una búsqueda en la base de datos con el Nombre del vendedor, para almacenar en su lista la venta realizada, la cual se mostrará al supervisor de la compañía a la que pertenece
+11.	Actualizar base de datos	
+
+
+HU_007_Verificar_correcto_almacenamiento_de_la_venta
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Mostrará las ventas que han sido guardadas
+6.	Frente a cada venta, habrá un botón “Consultar” 
+7.	Los datos de la venta serán vistos
+Nombre del Vendedor
+	Producto
+	Cantidad
+	Precio por unidad
+	Costo total
+	Tipo de venta (Presencial o Virtual)
+	Presencial
+	Cliente
+	Nombre de la persona que recogerá el pedido
+	Virtual
+	Costo domicilio
+	Cliente que recibe
+	Dirección de residencia
+	Número de consecutivo asignado
+ 
+ 
+HU_008_Información_de_ventas_realizadas
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Tiene alguna solicitud de ventas de algún producto?
+Si:
+Ingresar para ver los detalles de las ventas
+Detalles:	
+	Nombre del Vendedor
+	Producto
+	Cantidad
+	Precio por unidad
+	Costo total
+	Tipo de venta (Presencial o Virtual)
+	Presencial
+	Cliente
+	Nombre de la persona que recogerá el pedido
+	Virtual
+	Costo domicilio
+	Cliente que recibe
+	Dirección de residencia
+	Verificar si el pago fue hecho
+Dicha venta se agregará a una base de datos para llevar un registro
+Dicho registro se hará por cada vendedor
+No:
+Mostrar las ventas que se han realizado a la fecha por cada vendedor
+ 
+ 
+HU_009_Búsqueda_de_Venta
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Habrá un label “Buscar”
+6.	Frente a él, command box, donde podrá ingresar
+Consecutivo asignado a la venta
+Documento de identidad del cliente
+Nombre del Cliente
+En caso de,
+Consecutivo asignado a la venta
+Se realizará una búsqueda en la base de datos, en la columna “Consecutivo”
+Se traerá la información de la venta
+Documento de identidad del cliente
+Se realizará una búsqueda en la base de datos, en la columna “CC Cliente”
+Se traerá la información de las ventas solicitadas por el Cliente en mención
+Seleccionar la venta de interés
+Nombre del Cliente
+Se realizará una búsqueda en la base de datos, en la columna “Nombre Cliente”
+Se traerá la información de las ventas solicitadas por el Cliente en mención
+Comparar el nombre el Cliente con el número de identificación, para asegurarse que se habla de la misma persona
+7.	Seleccionar la venta de interés
+ 
+ 
+HU_010_Actualización_de_Venta
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Buscar la venta de interés
+6.	Serán expuestos los detalles de la venta
+Nombre del Vendedor
+	Producto
+	Cantidad
+	Precio por unidad
+	Costo total
+	Tipo de venta (Presencial o Virtual)
+	Presencial
+	Cliente
+	Nombre de la persona que recogerá el pedido
+	Virtual
+	Costo domicilio
+	Cliente que recibe
+	Dirección de residencia
+	Número de consecutivo asignado
+7.	¿Desea actualizar los datos de la venta?
+Si:
+Clic en el botón “Actualizar”
+¿El pago por la venta fue hecho?
+	Si:
+	No se puede actualizar la venta
+	No:
+	Todos los items se pueden actualizar, menos el Número de consecutivo asignado
+No:
+Seguir consultando información de otras ventas si así lo considera 
+ 
+HU_011_Verificar_correcta_actualización_de_la_venta
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Ventas”
+5.	Mostrará las ventas que han sido guardadas
+6.	Frente a cada venta, habrá un botón “Consultar” 
+7.	Los datos de la venta serán vistos
+Nombre del Vendedor
+	Producto
+	Cantidad
+	Precio por unidad
+	Costo total
+	Tipo de venta (Presencial o Virtual)
+	Presencial
+	Cliente
+	Nombre de la persona que recogerá el pedido
+	Virtual
+	Costo domicilio
+	Cliente que recibe
+	Dirección de residencia
+	Número de consecutivo asignado
+8.	Los datos que fueron actualizados, serán resaltados, con un cambio de color en la letra
+ 
+ 
+HU_012_Registrar_un_producto
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña “Productos”
+5.	Allí habrá una lista de los productos que el vendedor ofrece
+6.	Al final de la lista, estará un botón, “Agregar”
+7.	Direccionará a una página donde, podrá ingresar detalles del producto, como
+Nombre 
+Imágenes 
+Precio
+Descripción general
+	Garantía
+	Persona a cargo de la garantía
+	Medidas (si lo requiere)
+	Características especiales
+Número del vendedor, para que el cliente pueda resolver dudas si las tiene
+8.	Clic en “Ingresar”
+9.	A dicho producto se le asignará un número único para identificarlo ante los demás
+10.	Actualizar base de datos de productos
+ 
+ 
+HU_013_Verificar_correcto_ingreso_del_producto
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Productos”
+5.	Mostrará los productos que el vendedor ofrece
+6.	El último producto agregado estará encabezando la lista de productos
+7.	De la lista de los productos, clic en el botón “Consultar” 
+8.	Los datos del producto serán vistos
+Nombre 
+Imágenes 
+Precio
+Descripción general
+	Garantía
+	Persona a cargo de la garantía
+	Medidas (si lo requiere)
+	Color
+	Características especiales
+Número del vendedor, para que el cliente pueda resolver dudas si las tiene
+Número único de identificación
+9.	El producto ingresado será resaltado, con un cambio de color en la letra
+
+  
+HU_014_Ver_información_de_los_productos
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Productos”
+5.	Mostrará los productos que el vendedor ofrece
+6.	La lista de productos está ordenada, mostrando al inicio el producto más reciente y al final aquel que tenga una fecha de upload más antigua
+7.	Para ver la información de cada uno de los productos, basta con seleccionarlo y podrá observar los detalles de dicho producto
+Nombre 
+Imágenes 
+Precio
+Descripción general
+	Garantía
+	Persona a cargo de la garantía
+	Medidas (si lo requiere)
+	Color
+	Características especiales
+ 
+ 
+HU_015_Buscar_producto
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Productos”
+5.	Habrá un label “Buscar”
+6.	Frente a él, command box, donde podrá ingresar
+Número único asignado al producto
+Nombre del producto
+En caso de,
+Número único asignado al producto
+Se realizará una búsqueda en la base de datos de productos, en la columna “Número Único”
+Se traerá la información del producto
+Nombre del producto
+Se realizará una búsqueda en la base de datos de productos, en la columna “Producto”
+Se traerá la lista de productos bajo este nombre
+Seleccionar el producto de interés
+ 
+ 
+HU_016_Actualización_de_producto
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Productos”
+5.	Buscar el producto de interés
+6.	Serán expuestos los detalles de dicho producto
+Nombre 
+Imágenes 
+Precio
+Descripción general
+	Garantía
+	Persona a cargo de la garantía
+	Medidas (si lo requiere)
+	Color
+	Características especiales
+
+7.	¿Desea actualizar los datos del producto?
+Si:
+Clic en el botón “Actualizar”
+	Podrán actualizarse todos los items, con excepción del Número Único asignado
+No:
+Seguir consultando información de otros productos si así lo considera
+ 
+ 
+HU_017_Verificar_correcta_actualizacion_del_producto
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña de “Productos”
+5.	Mostrará los productos que el vendedor ofrece
+6.	De la lista de productos, clic en el botón “Consultar” 
+7.	Los datos del producto serán vistos
+Nombre 
+Imágenes 
+Precio
+Descripción general
+	Garantía
+	Persona a cargo de la garantía
+	Medidas (si lo requiere)
+	Color
+	Características especiales
+8.	Los datos que fueron actualizados, serán resaltados, con un cambio de color en la letra
+ 
+ 
+HU_018_Listar_información_de_vendedores
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña “Información de vendedores”
+5.	Mostrar lista de vendedores
+6.	Frente a cada vendedor, habrá un botón “Consultar”
+7.	Solicitará confirmar la contraseña, mediante un command box
+¿La contraseña coincide?
+Si:
+Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+No:
+Preguntará de nuevo
+Una Variable contadora “contador” valdrá 1
+	¿La contraseña coincide?
+		Si:
+		Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+	No:
+	Preguntará de nuevo
+“contador” aumentará en 1, “contador”=2
+		¿La contraseña coincide?
+		Si:
+		Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+	No:
+	Se cerrará la sesión del usuario
+ 
+ 
+HU_019_Actualizar_información_de_vendedores
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil
+4.	Dirigirse a la pestaña “Información de vendedores”
+5.	Mostrar lista de vendedores
+6.	Frente a cada vendedor, habrá un botón “Consultar”
+7.	Lo direccionará a otra página donde puede ver dicha información: 
+8.	¿Desea actualizar información del vendedor?
+Si:
+Muestra toda la información del vendedor:
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+   	Para cada campo existirá un botón “Actualizar” donde podrán modificar los datos personales del vendedor
+ 	Al final habrá un botón “Guardar” para que la información actualizada se almacene en la base de datos
+	No:
+	Podrá consultar la información de otro vendedor
+9. También habrá un botón para “Eliminar” al vendedor si así lo desea
+¿Lo desea?
+Si:
+Se hará una búsqueda en la base de datos del Nombre del Vendedor y toda información relacionada será eliminada por completo
+No:
+Muestra toda la información del vendedor:
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+ 
+ 
+HU_020_Verificar_correcta_actualización_de_vendedores
+
+1.	Ingresar a la página Web
+2.	Hacer la autenticación
+3.	Ingresar a su perfil 
+4.	Dirigirse a la pestaña “Información de vendedores”
+5.	Mostrar lista de vendedores
+6.	Frente a cada vendedor, habrá un botón “Consultar”
+7.	Solicitará confirmar la contraseña, mediante un command box
+¿La contraseña coincide?
+Si:
+Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+No:
+Preguntará de nuevo
+Una Variable contadora “contador” valdrá 1
+	¿La contraseña coincide?
+		Si:
+		Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+	No:
+	Preguntará de nuevo
+“contador” aumentará en 1, “contador”=2
+		¿La contraseña coincide?
+		Si:
+		Lo direccionará a otra página donde puede ver dicha información: 
+	Nombre Completo
+	Número de Identificación
+	Correo electrónico
+	Número de cuenta bancaria
+		Tipo de ventas (Presenciales, virtuales o híbridas)
+		Departamento
+		Ciudad
+		Dirección
+	No:
+	Se cerrará la sesión del usuario
+8.	Los datos que fueron actualizados, serán resaltados, con un cambio de color en la letra
