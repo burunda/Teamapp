@@ -33,8 +33,16 @@ app.post("/ingresarcliente",(req,res) =>{
             Object.keys(datosClientes).includes('genero')&&
             Object.keys(datosClientes).includes('marca')
         ) {
-                //implementar codigo para crear vendedor BD
-            res.sendStatus(200);            
+                //implementar codigo para cliente vendedor BD
+                conexion.collection('clientes').insertOne(datosClientes, (err,result) =>{
+                    if (err){
+                        console.error(err);
+                        res.sendStatus(500);
+                    }else {
+                        console.log(result);
+                        res.sendStatus(200)
+                    }
+                });           
         }else {
         res.sendStatus(500);
         }
@@ -50,7 +58,7 @@ const main = () =>{
             //throw err;
             console.error('Error conectando a la base de datos');
         }   
-        conexion= db.db('clientes');
+        conexion= db.db('teamapp');
         console.log('conexion exitosa');
         return app.listen(3000,() => {
             console.log ("escuchando en puerto 3000");
