@@ -1,5 +1,7 @@
 import google from 'media/google.jpg';
 import checklist from 'media/checklist.jpg';
+import { Link } from "react-router-dom";
+
 
 function Index() {
     return (
@@ -40,7 +42,9 @@ function Index() {
                     Contraseña: <input type="password" name="password" placeholder="1234"></input>
                     <br></br>
                     <br></br>
-                    <input type="button" value="Acceder" onclick="usrpas" ></input>
+                    <button className="boton">
+                        <Link className="copy" to='/perfil'>Acceder</Link>
+                    </button>
                   </form>
                   <figure>
                       <img src={google} alt=""></img>
