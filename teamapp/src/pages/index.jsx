@@ -41,9 +41,8 @@ function Index() {
                     <br></br>
                     Contraseña: <input type="password" name="password" placeholder="1234"></input>
                     <br></br>
-                    <br></br>
-                    <button className="boton">
-                        <Link className="copy" to='/perfil'>Acceder</Link>
+                    <button className="login">
+                        <Link className="login2" to='/perfil'>Acceder</Link>
                     </button>
                   </form>
                   <figure>
