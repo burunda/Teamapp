@@ -4,7 +4,7 @@ import Express from 'express';
 import {MongoClient} from 'mongodb';
 
 const stringconexion=
-"mongodb+srv://Senkuprogrammeuse:Senku17@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+"mongodb+srv://Senkuprogrammeuse:Senku17Team@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 const client = new MongoClient(stringconexion, {
     useNewUrlParser: true,
