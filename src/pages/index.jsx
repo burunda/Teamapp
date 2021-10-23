@@ -1,9 +1,17 @@
-import google from 'media/google.jpg';
 import checklist from 'media/checklist.jpg';
-import { Link } from "react-router-dom";
+import GoogleLogin from 'react-google-login';
 
 
 function Index() {
+    const onsuccess=(respuesta)=>{
+        console.log('Inicio correcto');
+        alert('Inició correctamente');
+    }
+    const onfailure=(respuesta)=>{
+        console.log('Inicio fallido');
+        alert('Intenta de nuevo');
+    }
+    
     return (
       <div className="App">
       <main>
@@ -41,14 +49,18 @@ function Index() {
                     <br></br>
                     Contraseña: <input type="password" name="password" placeholder="1234"></input>
                     <br></br>
+                    <br></br>
                     <button className="login">
-                        <Link className="login2" to='/perfil'>Acceder</Link>
+                        <GoogleLogin
+                        clientId="301885852798-pil9v0bsr0khvpjghrspk4nqhls89nij.apps.googleusercontent.com"
+                        buttonText="Iniciar Sesión"
+                        onSuccess={onsuccess}
+                        onFailure={onfailure}
+                        cookiePolicy={'single_host_origin'}
+                        />
                     </button>
+                    <br></br>
                   </form>
-                  <figure>
-                      <img src={google} alt=""></img>
-  
-                  </figure>
                   </div>
           </section>
   
@@ -61,12 +73,3 @@ function Index() {
   
   export default Index;
   
-  function usrpas(){
-      if (document.form1.usuario.value === "admin1" && document.form1.password.value === "1234"){
-        window.location = "gestion.html";
-        return
-      } else {
-        alert("Error de Usuario o Contraseña. Intenta de nuevo.")
-      }
-    }
-    

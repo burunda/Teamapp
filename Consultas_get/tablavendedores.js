@@ -3,7 +3,7 @@ import Express from 'express';
 import {MongoClient} from 'mongodb';
 
 const stringconexion=
-"mongodb+srv://Senkuprogrammeuse:Senku17@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+"mongodb+srv://Senkuprogrammeuse:Senku17Team@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 const client = new MongoClient(stringconexion, {
     useNewUrlParser: true,
@@ -40,8 +40,8 @@ const main = () =>{
         }   
         conexion= db.db('teamapp');
         console.log('conexion exitosa');
-        return app.listen(3000,() => {
-            console.log ("escuchando en puerto 3000");
+        return app.listen(5000,() => {
+            console.log ("escuchando en puerto 5000");
         });
     });
 };

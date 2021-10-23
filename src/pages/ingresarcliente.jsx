@@ -25,7 +25,7 @@ function IngresarCliente(){
         <fieldset>
             <legend> Ingresar nuevo cliente </legend>
             <label for="idcliente">Id Cliente:</label><br/>
-            <input type="text" id="idcliente" name="idcliente" readonly="true" value="100" /><br/>
+            <input type="text" id="idcliente" name="idcliente" placeholder="# ID" required="true" /><br/>
 
             <label for="nombre">Nombre:</label><br/>
             <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required="true" /><br/>

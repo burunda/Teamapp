@@ -2,6 +2,7 @@
 //const express = require('express');
 import Express from 'express';
 import {MongoClient} from 'mongodb';
+import Cors from 'cors';
 
 const stringconexion=
 "mongodb+srv://Senkuprogrammeuse:Senku17Team@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -15,6 +16,7 @@ let conexion;
 
 const app = Express();
 app.use(Express.json());
+app.use(Cors());
 
 //configuraciones
 //app.set('port',process.env.PORT || 3000);
@@ -60,8 +62,8 @@ const main = () =>{
         }   
         conexion= db.db('teamapp');
         console.log('conexion exitosa');
-        return app.listen(3000,() => {
-            console.log ("escuchando en puerto 3000");
+        return app.listen(5000,() => {
+            console.log ("escuchando en puerto 5000");
         });
     });
 };
