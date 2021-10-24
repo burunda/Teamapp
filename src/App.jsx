@@ -1,4 +1,4 @@
-import 'styles/styles.css';
+import 'styles/App.css';
 import Index from "pages/public/index";
 //import Perfil from "pages/perfil";
 import Clientes from "pages/admin/clientes";
