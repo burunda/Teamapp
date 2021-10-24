@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +37,6 @@ body {
 
 .header {
   height: 100vh;
-  /* 02 */
   background-image: linear-gradient(to top, rgba(255, 199, 239, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(../media/woman.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -463,3 +464,40 @@ legend {
   padding: 0.3em;
 }
 
+.sidebar {
+  width: 280px;
+  background: #9f8ad0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.PL {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.pmain {
+  flex: 1;
+  width: 100%;
+  overflow: scroll;
+  height: 100%;
+  background: aquamarine;
+}
+
+.cabecera {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.titulo {
+  font-size: 60px;
+  align-items: auto;
+}
+
+.titulo > div {
+  font-size: 20px;
+}
