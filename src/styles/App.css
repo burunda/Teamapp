@@ -481,8 +481,8 @@ legend {
 }
 
 .cabecera {
-  display: flex;
-  width: 100%;
+  display: block;
+  margin: auto;
   justify-content: center;
 
 }
@@ -494,4 +494,10 @@ legend {
 
 .titulo > div {
   font-size: 20px;
+}
+
+.login {
+  display: block;
+  margin: auto;
+  height: 7%;
 }

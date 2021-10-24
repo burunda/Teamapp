@@ -41,15 +41,6 @@ function Index() {
                   <h2 className="subtitulo">Acceso</h2>
                   <p className="p">Ingrese su usuario y contraseña para acceder al portal</p>
                   <br></br>
-                  <script>
-                      <usrpas />
-                  </script>
-                  <form className="form1">
-                    Usuario: <input type="text" name="usuario" placeholder="admin"></input>
-                    <br></br>
-                    Contraseña: <input type="password" name="password" placeholder="1234"></input>
-                    <br></br>
-                    <br></br>
                     <button className="login">
                         <GoogleLogin
                         clientId="301885852798-pil9v0bsr0khvpjghrspk4nqhls89nij.apps.googleusercontent.com"
@@ -60,7 +51,6 @@ function Index() {
                         />
                     </button>
                     <br></br>
-                  </form>
                   </div>
           </section>
   
