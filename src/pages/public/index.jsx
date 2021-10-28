@@ -39,8 +39,6 @@ function Index() {
           <section className="acceso">
               <div className="usrpas">
                   <h2 className="subtitulo">Acceso</h2>
-                  <p className="p">Ingrese su usuario y contraseña para acceder al portal</p>
-                  <br></br>
                     <button className="login">
                         <GoogleLogin
                         clientId="301885852798-pil9v0bsr0khvpjghrspk4nqhls89nij.apps.googleusercontent.com"
