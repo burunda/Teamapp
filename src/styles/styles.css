@@ -1,0 +1,26 @@
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.titulo {
+    font-size: 60px;
+    align-items: auto;
+}
+
+.titulo > div {
+    font-size: 20px;
+}
+
+.header {
+    height: 18vh;
+    background-image: linear-gradient(to top, rgba(255, 199, 239, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(../media/woman.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Gluten', cursive;
+  }

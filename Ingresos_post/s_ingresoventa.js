@@ -1,0 +1,72 @@
+//importar express
+//const express = require('express');
+import Express from 'express';
+import {MongoClient} from 'mongodb';
+import Cors from 'cors';
+
+
+const stringconexion=
+"mongodb+srv://Senkuprogrammeuse:Senku17Team@minticconcesionarioteam.pqncy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+const client = new MongoClient(stringconexion, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+let conexion;
+
+const app = Express();
+app.use(Express.json());
+app.use(Cors());
+
+
+//configuraciones
+//app.set('port',process.env.PORT || 3000);
+
+app.post("/ingresarventa",(req,res) =>{
+    const datosVentas = req.body;
+    console.log('llaves', Object.keys(datosVentas));
+    try{
+        if(
+            Object.keys(datosVentas).includes('idconcesionario')&&
+            Object.keys(datosVentas).includes('idvehiculo')&&
+            Object.keys(datosVentas).includes('fechaVenta')&&
+            Object.keys(datosVentas).includes('nombreVehiculo')&&
+            Object.keys(datosVentas).includes('marca')&&
+            Object.keys(datosVentas).includes('modelo')&&
+            Object.keys(datosVentas).includes('precio')
+        ) {
+                //implementar codigo para crear vendedor BD
+                conexion.collection('ventas').insertOne(datosVentas, (err,result) =>{
+                    if (err){
+                        console.error(err);
+                        res.sendStatus(500);
+                    }else {
+                        console.log(result);
+                        res.sendStatus(200)
+                    }
+                });              
+        }else {
+        res.sendStatus(500);
+        }
+    } catch{
+        res.sendStatus(500);
+    }
+});
+
+const main = () =>{
+    client.connect((err,db)=>{
+        
+        if (err){
+            //throw err;
+            console.error('Error conectando a la base de datos');
+        }   
+        conexion= db.db('teamapp');
+        console.log('conexion exitosa');
+        return app.listen(5000,() => {
+            console.log ("escuchando en puerto 5000");
+        });
+    });
+};
+
+main();
